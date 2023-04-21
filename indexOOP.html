@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Calculate Rectangle Area</title>
+</head>
+
+<body>
+
+ <h2>Calculate Rectangle Area</h3>
+
+ <label for="length">Length:</label>
+ <input type="text" id="length"><br><br>
+
+ <label for="width">Width:</label>
+ <input type="text" id="width"><br><br>
+
+ <button onclick="calculateArea()">Calculate Area</button><br><br>
+
+ <p id="result"></p>
+
+ <script>
+  class Rectangle {
+   constructor(length, width) {
+    this.length = length;
+    this.width = width;
+   }
+
+   getArea() {
+    return this.length * this.width;
+   }
+  }
+
+  function calculateArea() {
+   let length = document.getElementById("length").value;
+   let width = document.getElementById("width").value;
+
+   let rectangle = new Rectangle(length, width);
+
+   document.getElementById("result").innerHTML = "Calculater Area of Rectangular = " + rectangle.getArea();
+  }
+    </script>
+<style>
+    h2{
+        color: red;
+    }
+    label{
+        color: blue;
+        
+    }
+    p{
+        color: blue;
+    }
+</style>
+</body>
+</html>
